@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>timezonejavatester</groupId>
+	<artifactId>timezonejavatester</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.timezoneutc.main.Main</mainClass>
+							<packageName>main</packageName>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib</classpathPrefix>
+						</manifest>
+						<manifestEntries>
+							<Specification-Version>${project.version}</Specification-Version>
+							<Specification-Vendor>UTC-TimeZone</Specification-Vendor>
+							<Specification-Title>UTC Timezone list by month</Specification-Title>
+							<Implementation-Version>${project.version},${project.buildNumber}</Implementation-Version>
+						</manifestEntries>
+					</archive>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
